@@ -4,7 +4,7 @@
 " Last modified: Fri Jun 21  8:52:02 PST 2018                              "
 "                                                                          "
 " Installation instructions:                                               "
-" 1. Clone this repo into ~/vimfiles                                       "
+" 1. Clone this repo into ~/vimfiles (Windows) or ~/.vim (*NIX)            "
 " 2. In ~/vimfiles do a "git submodule update --init" to clone the autopac "
 "    plugin.                                                               "
 " 3. Copy or symlink ~/vimfiles/_vimrc to ~/.vimrc                         "
