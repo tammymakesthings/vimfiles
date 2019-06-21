@@ -1,97 +1,19 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " .vimrc: Vim configuration - Updated for Vim 8                            "
 " Tammy Cravit <tammymakesthings@gmail.com>                                "
-" Last modified: Thu Feb 15 14:48:02 PST 2018                              "
+" Last modified: Fri Jun 21  8:52:02 PST 2018                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "===========================================================================
-" Setup package manager
+" Setup package manager - packages are in ~/vimfiles/my_packages.vim
 "===========================================================================
 
-packadd minpac
-call minpac#init()
+packadd autopac
+runtime OPT autopac.vim
 
-"===========================================================================
-" Load Packages
-"===========================================================================
-
-" General packages
-call minpac#add('tpope/vim-unimpaired')
-call minpac#add('tpope/vim-scriptease', {'type': 'opt'})
-call minpac#add('k-takata/minpac', {'type': 'opt'})
-call minpac#add('tpope/vim-sensible')
-call minpac#add('MarcWeber/vim-addon-mw-utils')
-call minpac#add('tomtom/tlib_vim')
-call minpac#add('editorconfig/editorconfig-vim')
-
-" Snippet packages
-call minpac#add('SirVer/ultisnips')
-call minpac#add('honza/vim-snippets')
-
-" Ruby packages
-call minpac#add('tpope/vim-rails', {'type': 'opt'})
-call minpac#add('tpope/vim-rake', {'type': 'opt'})
-call minpac#add('vim-ruby/vim-ruby', {'type': 'opt'})
-call minpac#add('groenewege/vim-less', {'type': 'opt'})
-call minpac#add('tpope/vim-haml', {'type': 'opt'})
-
-" Python packages
-call minpac#add('python-mode/python-mode', {'type': 'opt'})
-call minpac#add('vim-syntastic/syntastic', {'type': 'opt'})
-call minpac#add('nvie/vim-flake8', {'type': 'opt'})
-call minpac#add('Lokaltog/powerline')
-call minpac#add('Vimjas/vim-python-pep8-indent', {'type': 'opt'})
-call minpac#add('alfredodeza/pytest.vim', {'type': 'opt'})
-
-" Node.js packages
-call minpac#add('w0rp/ale', {'type': 'opt'})
-call minpac#add('pangloss/vim-javascript', {'type': 'opt'})
-
-call minpac#add('tomtom/tcomment_vim')
-call minpac#add('jiangmiao/auto-pairs')
-call minpac#add('ervandew/supertab')
-
-" Fuzzy finder for vim (CTRL+P)
-call minpac#add('kien/ctrlp.vim')
-
-" For tests
-call minpac#add('janko-m/vim-test')
-
-" Navigation tree
-call minpac#add('scrooloose/nerdtree')
-
-" Dispatching the test runner to tmux pane
-call minpac#add('tpope/vim-dispatch')
-
-" Better status bar
-call minpac#add('bling/vim-airline')
-call minpac#add('vim-airline/vim-airline-themes')
-
-" Indent guides
-call minpac#add('nathanaelkane/vim-indent-guides')
-
-" Vim Org Mode
-call minpac#add('jceb/vim-orgmode', {'type': 'opt'})
-
-" Vim Notes
-call minpac#add('xolox/vim-misc', {'type': 'opt'})
-call minpac#add('xolox/vim-notes', {'type': 'opt'})
-
-" Arduino
-call minpac#add('sudar/vim-arduino-syntax', {'type': 'opt'})
-call minpac#add('sudar/vim-arduino-snippets', {'type': 'opt'})
-call minpac#add('nottwo/avr-vim', {'type': 'opt'})
-
-" Other tools
-call minpac#add('bronson/vim-trailing-whitespace')
-call minpac#add('tpope/vim-surround')
-call minpac#add('tpope/vim-repeat')
-call minpac#add('luochen1990/rainbow')
-call minpac#add('rstacruz/sparkup')
-call minpac#add('christoomey/vim-tmux-navigator')
-
-command! PackUpdate call minpac#update()
-command! PackClean call minpac#clean()
+command! PackUpdate call autopac#update('', {'do': 'call autopac#status()'})
+command! PackClean  call autopac#clean()
+command! PackStatus call autopac#status()
 
 "===========================================================================
 " General configuration
