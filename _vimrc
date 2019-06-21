@@ -2,6 +2,20 @@
 " .vimrc: Vim configuration - Updated for Vim 8                            "
 " Tammy Cravit <tammymakesthings@gmail.com>                                "
 " Last modified: Fri Jun 21  8:52:02 PST 2018                              "
+"                                                                          "
+" Installation instructions:                                               "
+" 1. Clone this repo into ~/vimfiles                                       "
+" 2. In ~/vimfiles do a "git submodule update --init" to clone the autopac "
+"    plugin.                                                               "
+" 3. Copy or symlink ~/vimfiles/_vimrc to ~/.vimrc                         "
+" 4. Start vim. You'll get an error about the color theme package being    "
+"    missing. You can ignore this error to get Vim loaded.                 "
+" 5. In vim, give the command ":PackUpdate" to download the packages.      "
+" 6. Quit and restart vim.                                                 "
+"                                                                          "
+" Adding or removing plugins:                                              "
+" 1. Edit the file "myplugins.vim" as appropriate.                         "
+" 2. Give the command ":PackUpdate" in vim.                                "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "===========================================================================
@@ -88,8 +102,10 @@ set incsearch
 set ignorecase
 set smartcase
 
-" highlight the current line
-set cursorline
+" highlight the current line (only in GUI mode, because distraction)
+if has("gui_running")
+    set cursorline
+endif
 
 " Set default window size and font
 if has("gui_running")
