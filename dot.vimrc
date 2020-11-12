@@ -47,7 +47,9 @@ Bundle 'gmarik/vundle'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
+if has("python")
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+endif
 
 " Node.js Stuff
 Plugin 'w0rp/ale'

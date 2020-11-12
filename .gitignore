@@ -1,2 +1,2 @@
-pack/*
-!pack/unmanaged
+bundle/*
+!bundle/Vundle.vim
