@@ -1,3 +1,0 @@
-[submodule "pack/unmanaged/opt/autopac"]
-	path = pack/unmanaged/opt/autopac
-	url = git@github.com:meldavis/autopac.git
