@@ -97,6 +97,7 @@ Bundle 'ajmwagar/vim-deus'
 Plugin 'chriskempson/base16-vim'
 Plugin 'dracula/vim'
 Plugin 'romainl/Apprentice'
+Plugin 'arcticicestudio/nord-vim'
 
 " Other tools
 Bundle 'bronson/vim-trailing-whitespace'
@@ -164,8 +165,8 @@ syntax on
 set nrformats-=octal
 
 " Set default font and color scheme
-colorscheme apprentice
-let g:airline_theme='apprentice'
+colorscheme nord
+let g:airline_theme='nord'
 
 " Remap the key sequence "jj" to the Escape key
 inoremap jj <Esc>
